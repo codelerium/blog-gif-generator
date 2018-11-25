@@ -1,0 +1,1 @@
+curl localhost:3030/generate

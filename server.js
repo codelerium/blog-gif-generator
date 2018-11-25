@@ -24,9 +24,9 @@ app.post('/data', multipartUpload, (req, res) => {
 
 app.get('/generate', (req, res) => {
     const encoder = new GIFEncoder(800, 600);
-    pngFileStream('uploads/**/forward-kinematics-????.png')
+    pngFileStream('uploads/**/forward-kinematics-segment-2-????.png')
         .pipe(encoder.createWriteStream({ repeat: 0, delay: 0.1, quality: 10 }))
-        .pipe(fs.createWriteStream('forward-kinemtaics-5.gif'));
+        .pipe(fs.createWriteStream('forward-kinematics-segment-2.gif'));
 
     res.send('Generating gif!');
 });
